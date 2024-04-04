@@ -46,7 +46,7 @@ def create_deck():
 
 def show_player_info(player_cards: list[Card], dealer_cards:list[Card] | None = None):
     os.system("clear")
-    player_score = sum(card.get_value() for card in player_card)
+    player_score = sum(card.get_value() for card in player_cards)
     pl_bl = ' (Blackjack!)' if player_score == 21 else ''
     if not dealer_cards:
         print(f"Score | Player: {player_score}{pl_bl}")
